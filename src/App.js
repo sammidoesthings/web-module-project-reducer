@@ -29,7 +29,7 @@ function App() {
   }
 
   const handleAddMemory = () => {
-    dispatch(addMemory(state.total))
+    dispatch(addMemory(state.memory))
   }
 
   const handleResetMemory = () => {
@@ -53,9 +53,9 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"} onClick={() => {handleCurrentMemory(currentMemory)}}/>
-              <CalcButton value={"MR"} onClick={() => {handleAddMemory(addMemory)}}/>
-              <CalcButton value={"MC"} onClick={() => {handleResetMemory(resetMemory)}}/>
+              <CalcButton value={"M+"} onClick={handleCurrentMemory}/>
+              <CalcButton value={"MR"} onClick={handleAddMemory}/>
+              <CalcButton value={"MC"} onClick={handleResetMemory}/>
             </div>
 
             <div className="row">
